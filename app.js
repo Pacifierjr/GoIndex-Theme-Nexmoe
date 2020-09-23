@@ -5479,22 +5479,22 @@
   );
 });
 document.write(
-  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/sawankumar/GoIndex-Theme-Nexmoe@1.0.0/css/mdui_v2.min.css">'
+  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Pacifierjr/GoIndex-Theme-Nexmoe@1.0.0/css/mdui_v2.min.css">'
 );
 document.write(
-  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/sawankumar/GoIndex-Theme-Nexmoe@1.0.0/css/nexmoe_v2.min.css">'
+  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Pacifierjr/GoIndex-Theme-Nexmoe@1.0.0/css/nexmoe_v2.min.css">'
 );
 document.write(
-  '<script src="//cdn.jsdelivr.net/gh/sawankumar/GoIndex-Theme-Nexmoe@1.0.0/js/mdui.min.js"></script>'
+  '<script src="//cdn.jsdelivr.net/gh/Pacifierjr/GoIndex-Theme-Nexmoe@1.0.0/js/mdui.min.js"></script>'
 );
 document.write(
-  '<script src="//cdn.jsdelivr.net/gh/sawankumar/GoIndex-Theme-Nexmoe@1.0.0/js/flv.min.js"></script>'
+  '<script src="//cdn.jsdelivr.net/gh/Pacifierjr/GoIndex-Theme-Nexmoe@1.0.0/js/flv.min.js"></script>'
 );
 document.write(
-  '<script src="//cdn.jsdelivr.net/gh/sawankumar/GoIndex-Theme-Nexmoe@1.0.0/js/DPlayer.min.js"></script>'
+  '<script src="//cdn.jsdelivr.net/gh/Pacifierjr/GoIndex-Theme-Nexmoe@1.0.0/js/DPlayer.min.js"></script>'
 );
 document.write(
-  '<script src="//cdn.jsdelivr.net/gh/sawankumar/GoIndex-Theme-Nexmoe@1.0.0/js/markdown-it.min.js"></script>'
+  '<script src="//cdn.jsdelivr.net/gh/Pacifierjr/GoIndex-Theme-Nexmoe@1.0.0/js/markdown-it.min.js"></script>'
 );
 document.write(
   "<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-container{max-width:980px}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1}@media screen and (max-width:980px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}}</style>"
@@ -6078,13 +6078,12 @@ function file_code(path) {
 <pre id="editor" ></pre>
 </div>
 <div class="mdui-textfield">
-	<label class="mdui-textfield-label">Download Link</label>
-	<input class="mdui-textfield-input" type="text" value="${href}"/>
+	
 </div>
-<a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 
-<script src="//cdn.jsdelivr.net/gh/sawankumar/GoIndex-Theme-Nexmoe/js/ace.js"></script>
-<script src="//cdn.jsdelivr.net/gh/sawankumar/GoIndex-Theme-Nexmoe/js/ext-language_tools.js"></script>
+
+<script src="//cdn.jsdelivr.net/gh/Pacifierjr/GoIndex-Theme-Nexmoe/js/ace.js"></script>
+<script src="//cdn.jsdelivr.net/gh/Pacifierjr/GoIndex-Theme-Nexmoe/js/ext-language_tools.js"></script>
 	`;
   $("#content").html(content);
   $.get(path, function (data) {
@@ -6135,9 +6134,7 @@ function file_video(path) {
   player_items += `<li class="mdui-divider"></li>
                    <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">Copy Link</a></li>`;
   const playBtn = `
-      <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}">
-        <i class="mdui-icon material-icons">&#xe039;</i>Play In External Player<i class="mdui-icon material-icons">&#xe5cf;</i>
-      </button>
+      
       <ul class="mdui-menu" id="player-items">${player_items}</ul>`;
   const content = `
 <div class="mdui-container-fluid">
@@ -6146,11 +6143,10 @@ function file_video(path) {
 	<br>${playBtn}
 	<!-- ???? -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	  
 	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+
 	`;
   $("#content").html(content);
   $("#copy-link").on("click", () => {
@@ -6180,11 +6176,10 @@ function file_audio(path) {
 	<br>
 	<!-- ???? -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	  
 	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+
 	`;
   $("#content").html(content);
 }
@@ -6196,7 +6191,7 @@ function file_pdf(path) {
   );
   var content = `
 	<object data="${inline_url}" type="application/pdf" name="${file_name}" style="width:100%;height:94vh;"><embed src="${inline_url}" type="application/pdf"/></object>
-    <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+    
 	`;
   $("#content")
     .removeClass("mdui-container")
@@ -6257,12 +6252,11 @@ function file_image(path) {
     </div>
 	<br>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	  
 	</div>
         <br>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+
     `;
   $("#content").html(content);
   $("#leftBtn, #rightBtn").click((e) => {
