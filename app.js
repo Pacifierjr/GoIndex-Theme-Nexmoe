@@ -5795,7 +5795,7 @@ function append_files_to_list(path, files) {
         ) >= 0
       ) {
         targetFiles.push(filepath);
-        p += "?a=view";
+        p += "";
         c += " view";
       }
       html += `<li class="mdui-list-item file mdui-ripple" target="_blank"><a gd-type="${item.mimeType}" href="${p}" class="${c}">
